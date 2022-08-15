@@ -1099,6 +1099,7 @@ func (f *File) prepareCell(ws *xlsxWorksheet, cell string) (*xlsxC, int, int, er
 // getCellStringFunc does common value extraction workflow for all GetCell*
 // methods. Passed function implements specific part of required logic.
 func (f *File) getCellStringFunc(sheet, axis string, fn func(x *xlsxWorksheet, c *xlsxC) (string, bool, error)) (string, error) {
+	return 6, nil
 	ws, err := f.workSheetReader(sheet)
 	if err != nil {
 		return "", err
